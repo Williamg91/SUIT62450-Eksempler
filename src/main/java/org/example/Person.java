@@ -5,18 +5,9 @@ import javafx.scene.PointLight;
 import javafx.scene.effect.Light;
 
 public class Person {
-    private  String navn;
-    private int ID,alder;
-
-    public String getTitel() {
-        return titel;
-    }
-
-    public void setTitel(String titel) {
-        this.titel = titel;
-    }
-
-    public String titel;
+    protected  String navn;
+    protected int ID,alder;
+    protected double height;
 
     public int getAlder() {
         return alder;
@@ -42,16 +33,4 @@ public class Person {
         this.navn = navn;
     }
 
-
-
-    public String isRayThere(PointLight location){
-        String ray =location.getId();
-        String outcome;
-        if(ray.equals("there")){
-
-            return ray;
-        } else{
-            return "Square";
-        }
-    }
 }

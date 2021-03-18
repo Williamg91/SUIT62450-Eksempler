@@ -17,10 +17,16 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
 
 
-        scene = new Scene(loadFXML("loginscreen"), 640, 580);
+        scene = new Scene(loadFXML("Startknap"), 640, 580);
         stage.setScene(scene);
         stage.show();
+
+       // Stage stage2 = new Stage();
+        //stage2.setScene(new Scene(loadFXML("primary"),500,500));
+        //stage2.show();
     }
+
+
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));

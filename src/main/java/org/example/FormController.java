@@ -24,7 +24,7 @@ public class FormController {
     private TextField mailfield;
 
     @FXML
-    private PasswordField passfield;
+    private PasswordField passwordfield;
 //hvis en attribut er public og deler navn med en attribut i en FXML fil - Så behøver man ikke @FXML
     //
     public TextField textField;
@@ -48,15 +48,22 @@ public class FormController {
         }
     }
 
+
+    public void showMainMenu() throws IOException {
+        App.setRoot("Doctorview");
+
+
+    }
+
     public void logintoMainScreen(ActionEvent actionEvent) {
         try {
 
-            System.out.println(passfield.getText());
+            System.out.println(passwordfield.getText());
             System.out.println(mailfield.getText());;
             String password ="password";
-            if(passfield.getText().contains(password)){
+            if(passwordfield.getText().contains(password)){
                 System.out.println("hej");
-                App.setRoot("nurseview");
+
             }
             else{
                 App.setRoot("primary");
